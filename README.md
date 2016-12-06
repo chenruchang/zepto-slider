@@ -12,5 +12,12 @@
         width: 250,
         showLabels: true,
         showScale: true,
-        theme: 'theme-yellow'
+        theme: 'theme-yellow',
+        onstatechange: function (value) {
+          var start = value.split(',')[0];//起始值
+          var end = value.split(',')[1];//结束值
+        }
   });
+  
+  
+  $('.range-slider-pink').zptSlider('setValue', '2, 120');//给控件设置值

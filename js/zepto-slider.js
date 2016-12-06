@@ -278,7 +278,7 @@
 
     this.each(function () {
       var $this = $(this),
-          data = $this.data('plugin_' + pluginName),
+          data = $.data(this, 'plugin_' + pluginName),
           options = typeof option === 'object' && option;
       if (!data) {
         $this.data('plugin_' + pluginName, (data = new zptSlider(this, options)));

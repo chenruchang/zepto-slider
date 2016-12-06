@@ -18,6 +18,11 @@
             margin-top: 80px;
             margin-left: 20px;
         }
+
+        #setValue{
+            width:100px;
+            margin-top:40px;
+        }
     </style>
 </head>
 <body>
@@ -44,9 +49,11 @@
 
 <div class="demo">
     <input class="range-slider-pink" type="hidden" value="10,89"/>
+    <button id="setValue">设置值</button>
 </div>
 
 <script type="text/javascript" src="js/zepto.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
 <script type="text/javascript" src="js/zepto-slider.js"></script>
 <script type="text/javascript">
 
@@ -72,7 +79,7 @@
         showLabels: true,
         isRange: true,
         theme: 'theme-yellow',
-        showScale:true
+        showScale: true
     });
 
     $('.single-slider-blue').zptSlider({
@@ -121,6 +128,10 @@
         showLabels: true,
         isRange: true,
         theme: 'theme-pink'
+    });
+
+    $('#setValue').click(function () {
+        $('.range-slider-pink').zptSlider('setValue', '2, 120');
     });
 </script>
 
